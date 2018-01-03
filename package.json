@@ -1,0 +1,26 @@
+{
+  "name": "insurancebot",
+  "version": "1.0.0",
+  "description": "Bot for claims",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "authy": "^1.2.0",
+    "bluebird": "^3.5.1",
+    "botbuilder": "^3.11.0",
+    "dotenv": "^4.0.0",
+    "microsoft-adaptivecards": "^0.6.1",
+    "mongodb": "^2.2.29",
+    "mongoose": "^4.12.1",
+    "nodemailer": "^4.1.3",
+    "path": "^0.12.7",
+    "request-promise": "^4.2.2",
+    "restify": "^4.2.0",
+    "twilio": "^3.8.0"
+  }
+}

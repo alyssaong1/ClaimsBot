@@ -1,0 +1,47 @@
+<!-- This page uses webchat -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Allianz</title>
+        <style>
+            body, html {
+                margin: 0 auto;
+                height: 100%;
+            }
+
+            .bg { 
+                /* The image used */
+                background-image: url("http://i.imgur.com/J6EaJx6.jpg");
+
+                /* Full height */
+                height: 100%; 
+
+                /* Center and scale the image nicely */
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="bg"></div>
+    <!--
+    <h1>My First Heading</h1>
+    <p>My first paragraph.</p>-->
+    <script>
+        (function () {
+            var div = document.createElement("div");
+            document.getElementsByTagName('body')[0].appendChild(div);
+            div.outerHTML = "<div id='botDiv' style='height: 38px; position: fixed; bottom: 0; right:0; z-index: 1000; background-color: #fff'><div id='botTitleBar' style='height: 38px; width: 400px; position:fixed; cursor: pointer;'></div>Your webchat iframe embed code here</div>"; 
+
+            document.querySelector('body').addEventListener('click', function (e) {
+                e.target.matches = e.target.matches || e.target.msMatchesSelector;
+                if (e.target.matches('#botTitleBar')) { 
+                    var botDiv = document.querySelector('#botDiv'); 
+                    botDiv.style.height = botDiv.style.height == '600px' ? '38px' : '600px';
+                };
+            });
+        }());
+    </script>
+    </body>
+</html>
